@@ -1,6 +1,8 @@
 # Distress Coping Motives and Alcohol Use in Daily Life
 
-**Nicholai Chasseau · Independent secondary-data working paper · October 2026**
+**Nicholai Chasseau · Independent secondary-data working paper**
+
+**Project development:** September 2026–present. **Working-paper release:** 9 October 2026; under author review.
 
 How does daily distress relate to alcohol use, and does that association differ with baseline coping motives? This project uses investigator-collected and processed ecological momentary assessment data to build a transparent bridge from cognitive appraisal research to substance-use research.
 
