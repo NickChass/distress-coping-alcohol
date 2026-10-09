@@ -1,0 +1,54 @@
+[
+  {
+    "name": "sms.imp.processed.RData",
+    "url": "https://osf.io/download/b6m3u/",
+    "bytes": 33927466,
+    "sha256": "d5bc284a66ac805bbac3adba7ff636ecac5364ef3cace074b370b911f09aeb13",
+    "osf": {
+      "hashes": {
+        "md5": "7df8d1597761a2ee6d8cc0a289052ef9",
+        "sha256": "d5bc284a66ac805bbac3adba7ff636ecac5364ef3cace074b370b911f09aeb13"
+      },
+      "downloads": 30
+    }
+  },
+  {
+    "name": "sca_hyp2.R",
+    "url": "https://osf.io/download/amjk7/",
+    "bytes": 11447,
+    "sha256": "c381278389ad1de9f2f4a36c7392c004dbad8fa4ea67cd6bcc9a4af65deedc47",
+    "osf": {
+      "hashes": {
+        "md5": "0327b72abfe333a31a1f9bd60ef184da",
+        "sha256": "c381278389ad1de9f2f4a36c7392c004dbad8fa4ea67cd6bcc9a4af65deedc47"
+      },
+      "downloads": 19
+    }
+  },
+  {
+    "name": "sca_hyp1.R",
+    "url": "https://osf.io/download/hdwj7/",
+    "bytes": 11180,
+    "sha256": "a8f0434d1f54d43f5843925dbbe36945afd6e6e220dd8bae37e9134d1fb59957",
+    "osf": {
+      "hashes": {
+        "md5": "2b1248e3f11327853ec2c93acc385696",
+        "sha256": "a8f0434d1f54d43f5843925dbbe36945afd6e6e220dd8bae37e9134d1fb59957"
+      },
+      "downloads": 18
+    }
+  },
+  {
+    "name": "sca_affect_processing_imputation.R",
+    "url": "https://osf.io/download/abypm/",
+    "bytes": 48274,
+    "sha256": "affa32f615c98de30af797beba5eb1c8d78321e9874e31e70a51b8dfc62edc54",
+    "osf": {
+      "hashes": {
+        "md5": "431e1fe49bd9da13231207129d74aade",
+        "sha256": "affa32f615c98de30af797beba5eb1c8d78321e9874e31e70a51b8dfc62edc54"
+      },
+      "downloads": 14
+    }
+  }
+]

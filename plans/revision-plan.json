@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-09",
+  "status": "Post hoc manuscript development after inspecting the initial 50 models. Not preregistered.",
+  "aim": "Check whether residual shifts in person means after covariate-based row exclusions alter interpretation of the negative-affect slope.",
+  "additional_fits": "Ten within-between adjusted coping models: daily mean and last eligible report, five source imputations each. Recenter source-standardized negative affect within each eligible participant's analysis rows, include the participant mean as a separate covariate, retain the coping interaction and original covariate set.",
+  "inference_check": "Re-pool existing coping models with participant-count-based complete-data degrees of freedom as an explicitly approximate sensitivity, without refitting.",
+  "reporting": "Report every additional model's sample, convergence and Hessian; do not pool failed models or omit them based on significance. Keep source-data processing and imputation attribution. Add full coefficient and interaction tables, numerical verification and primary literature.",
+  "public_scope": "Original analysis code, aggregate results, manuscript, figures and data download/hash manifest only. Exclude participant data, model objects, CVs, application ratings, interview coaching, personal substance-use history and credentials.",
+  "authorship": "Nicholai Chasseau is named as author of this independent secondary-data working paper. AI implementation and manuscript assistance are disclosed in an author note. Do not claim independent data collection, peer review or completed author validation."
+}

@@ -1,0 +1,7 @@
+{
+  "additional_models": 10,
+  "all_valid": true,
+  "manual_Rubin_estimate_difference": 1.3878e-17,
+  "manual_Rubin_standard_error_difference": 4.5103e-17,
+  "post_hoc": true
+}

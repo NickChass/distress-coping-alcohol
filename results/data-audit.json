@@ -1,0 +1,11 @@
+{
+  "source": "https://osf.io/fm6cq/",
+  "imputations": 5,
+  "participants": 496,
+  "scheduled_days_per_person": 32,
+  "scheduled_person_days": 15872,
+  "observed_alcohol_days": 10780,
+  "missing_original_alcohol_fraction": 0.3208,
+  "note": "Original processed affect columns are NA in the .imp=0 frame. This is a derived-data representation, not evidence of 100% missing EMA affect. A raw complete-case comparison cannot be reconstructed from this download.",
+  "scope": "Four focused specifications for two affect summaries, five imputations each; two additional five-imputation sensitivities. Not the full published specification curve."
+}

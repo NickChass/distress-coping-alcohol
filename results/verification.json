@@ -1,0 +1,10 @@
+{
+  "model_fits": 50,
+  "all_converged": true,
+  "all_positive_hessian": true,
+  "binary_hurdle_logodds_difference": -2.2914e-06,
+  "stricter_optimizer_max_coefficient_difference": 0.0001,
+  "stricter_optimizer_max_affect_coefficient_difference": 6.8197e-06,
+  "strict_optimizer_max_gradient": 0.0037,
+  "checks": "Dataset hash; one row per person-day in each operationalization; coding of coping SD; reversal of no-use hurdle odds; Rubin pooling; optimizer stability"
+}

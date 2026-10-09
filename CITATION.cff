@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite the working paper when referring to this reanalysis. Cite Dora et al. (2026) separately for the original investigation and data."
+type: software
+title: "Distress coping motives and alcohol use in daily life: A focused secondary analysis and a proposed study of cognitive appraisal"
+authors:
+  - family-names: Chasseau
+    given-names: Nicholai
+version: "1.0"
+date-released: 2026-10-09
+url: "https://github.com/NickChass/distress-coping-alcohol"
+repository-code: "https://github.com/NickChass/distress-coping-alcohol"
+abstract: "Independent secondary-data working paper with a focused alcohol-use reanalysis and proposed appraisal study. Under author review and not peer reviewed. Original data were collected and processed by Dora et al. (2026)."
+keywords:
+  - alcohol use
+  - negative affect
+  - coping motives
+  - cognitive appraisal
+  - ecological momentary assessment
+preferred-citation:
+  type: unpublished
+  title: "Distress coping motives and alcohol use in daily life: A focused secondary analysis and a proposed study of cognitive appraisal"
+  authors:
+    - family-names: Chasseau
+      given-names: Nicholai
+  year: 2026
+  version: "1.0"
+  notes: "Working paper under author review; not peer reviewed."
+  url: "https://github.com/NickChass/distress-coping-alcohol"

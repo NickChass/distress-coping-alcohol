@@ -1,0 +1,26 @@
+{
+  "timestamp_local": "2026-10-09 America/Port_of_Spain",
+  "status": "Specified before inspecting participant-level outcomes; source article findings already known. Not preregistered.",
+  "source": "Dora et al. (2026), OSF fm6cq",
+  "scope": "Focused reanalysis of negative/positive affect and alcohol-use likelihood plus coping-motive moderation; not reproduction of every specification curve or permutation test.",
+  "primary": "Compare within-person negative affect with alcohol-use likelihood, separating use probability from quantity. Use author-processed temporally filtered data if measurement audit confirms its meaning.",
+  "models": [
+    "Unmoderated within-person negative affect predicting alcohol-use probability",
+    "Negative affect plus positive affect to assess specificity",
+    "Negative affect by baseline coping-motives interaction"
+  ],
+  "sensitivity": [
+    "Negative affect using daily mean versus last available prior-use report, if available",
+    "Include versus omit positive affect",
+    "Use author imputations and compare complete observations when the original non-imputed data are supplied"
+  ],
+  "requirements": [
+    "Verify units and codebook against processing script",
+    "Record observations, participants and exclusions for every model",
+    "Report convergence and singularity problems; no selective model omission",
+    "Use pooled uncertainty across supplied multiple imputations",
+    "Distinguish emotion, appraisal and coping motives; no claim that appraisal was measured",
+    "No causal mediation or treatment-effect claims"
+  ],
+  "potential_extension": "Test whether within-person distress\u2013drinking associations differ by coping motives, framed as a focused explanatory probe rather than a novel finding if already tested in the source article."
+}

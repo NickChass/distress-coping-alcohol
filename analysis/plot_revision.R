@@ -1,0 +1,19 @@
+args<-commandArgs(trailingOnly=TRUE);stopifnot(length(args)==3)
+if(dir.exists('R-library')) .libPaths(c(file.path(getwd(),'R-library'),.libPaths()))
+suppressPackageStartupMessages(library(ggplot2))
+eff<-read.csv(file.path(args[1],'pooled-effects.csv'));wb<-read.csv(file.path(args[2],'within-between-effects.csv'));out<-args[3]
+dir.create(out,recursive=TRUE,showWarnings=FALSE)
+theme_set(theme_minimal(base_size=11)+theme(panel.grid.minor=element_blank(),legend.position='bottom',plot.title=element_text(size=13,face='bold'),legend.text=element_text(size=10)))
+labspec<-c(source_unadjusted='Unadjusted',source_adjusted='Adjusted',coping_adjusted='Adjusted with coping interaction',common_sample_unadjusted='Unadjusted on adjusted sample')
+a<-subset(eff,component=='zi'&specification%in%names(labspec)&(is.na(coping_z)|coping_z==0))
+a$label<-factor(labspec[a$specification],levels=rev(unname(labspec)));a$summary<-ifelse(a$operation=='mean','Daily mean','Last eligible report')
+p1<-ggplot(a,aes(ratio,label,color=summary))+geom_vline(xintercept=1,linetype=2,color='grey50')+geom_errorbar(aes(xmin=ratio_lower,xmax=ratio_upper),orientation='y',width=.16,position=position_dodge(.4))+geom_point(position=position_dodge(.4),size=2.5)+scale_x_log10()+scale_color_manual(values=c('#176a63','#435b86'))+labs(x='Drinking odds ratio per source-standardized affect unit',y=NULL,color=NULL,title='Negative affect and drinking likelihood',subtitle='Focused specifications with pooled 95% intervals')
+b<-subset(eff,component=='zi'&specification%in%c('coping_adjusted','observed_outcomes','capped_imputed_tail')&operation=='mean')
+b$label<-factor(b$specification,levels=c('coping_adjusted','observed_outcomes','capped_imputed_tail'),labels=c('Main model','Observed alcohol outcomes','Imputed counts capped at 30'))
+p2<-ggplot(b,aes(coping_z,ratio,color=label))+geom_hline(yintercept=1,linetype=2,color='grey50')+geom_line(position=position_dodge(.08))+geom_errorbar(aes(ymin=ratio_lower,ymax=ratio_upper),width=.08,position=position_dodge(.08))+geom_point(size=2.4,position=position_dodge(.08))+scale_y_log10()+scale_x_continuous(breaks=c(-1,0,1),labels=c('Lower (-1 SD)','Mean','Higher (+1 SD)'))+scale_color_manual(values=c('#176a63','#435b86','#9a6738'))+labs(x='Baseline coping motives',y='Drinking odds ratio per affect unit',color=NULL,title='Coping motives and conditional affect slopes',subtitle='Daily-mean affect; pooled 95% intervals')
+c<-subset(wb,component=='zi'&term=='affect_within');c$label<-'Within-between decomposition'
+d<-subset(eff,component=='zi'&specification=='coping_adjusted');d$label<-'Source-standardized predictor';c<-rbind(c[,c('operation','coping_z','ratio','ratio_lower','ratio_upper','label')],d[,c('operation','coping_z','ratio','ratio_lower','ratio_upper','label')])
+c$operation<-factor(c$operation,levels=c('mean','most'),labels=c('Daily mean','Last eligible report'))
+p3<-ggplot(c,aes(coping_z,ratio,color=label))+geom_hline(yintercept=1,linetype=2,color='grey50')+geom_line(position=position_dodge(.08))+geom_errorbar(aes(ymin=ratio_lower,ymax=ratio_upper),width=.06,position=position_dodge(.08))+geom_point(position=position_dodge(.08),size=2.3)+facet_wrap(~operation)+scale_y_log10()+scale_x_continuous(breaks=c(-1,0,1))+scale_color_manual(values=c('#435b86','#176a63'))+labs(x='Standardized coping motives',y='Drinking odds ratio per affect unit',color=NULL,title='Explicit within-person centring sensitivity',subtitle='Post hoc decomposition on eligible rows; pooled 95% intervals')
+for(i in 1:3){p<-list(p1,p2,p3)[[i]];name<-c('figure-1-negative-affect','figure-2-coping-sensitivity','figure-3-within-between')[i];ggsave(file.path(out,paste0(name,'.png')),p,width=9,height=ifelse(i==1,4.3,4.8),dpi=240);ggsave(file.path(out,paste0(name,'.pdf')),p,width=9,height=ifelse(i==1,4.3,4.8))}
+cat('Three figures completed\n')
